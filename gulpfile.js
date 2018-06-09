@@ -9,7 +9,7 @@ var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
-var sitePort = 8100;
+var sitePort = 8102;
 // Browser Sync
 
 // ConCat
