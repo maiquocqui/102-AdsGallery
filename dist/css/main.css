@@ -7843,13 +7843,21 @@ header {
       position: fixed;
       top: 0;
       bottom: 0;
+      background: #fff;
       -webkit-transition: all, 0.5s;
       -khtml-transition: all, 0.5s;
       -moz-transition: all, 0.5s;
       -ms-transition: all, 0.5s;
       -o-transition: all, 0.5s;
-      transition: all, 0.5s;
-      border-left: 1px solid rgba(255, 255, 255, 0.1); }
+      transition: all, 0.5s; }
+      header .overlay .overlay-col:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.1); }
       header .overlay .overlay-col:nth-child(1) {
         left: 0%;
         right: 100%; }
@@ -7865,19 +7873,95 @@ header {
       header .overlay .overlay-col:nth-child(5) {
         left: 80%;
         right: 20%; }
-    header .overlay.active .overlay-col {
-      background: #fff;
-      border-left-color: #fff; }
-      header .overlay.active .overlay-col:nth-child(1) {
-        right: 80%; }
-      header .overlay.active .overlay-col:nth-child(2) {
-        right: 60%; }
-      header .overlay.active .overlay-col:nth-child(3) {
-        right: 40%; }
-      header .overlay.active .overlay-col:nth-child(4) {
-        right: 20%; }
-      header .overlay.active .overlay-col:nth-child(5) {
-        right: 0%; }
+    header .overlay.active .overlay-col:nth-child(1) {
+      right: 80%; }
+    header .overlay.active .overlay-col:nth-child(2) {
+      right: 60%; }
+    header .overlay.active .overlay-col:nth-child(3) {
+      right: 40%; }
+    header .overlay.active .overlay-col:nth-child(4) {
+      right: 20%; }
+    header .overlay.active .overlay-col:nth-child(5) {
+      right: 0%; }
+  header .menu {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center; }
+    header .menu .menu-content {
+      max-width: 1140px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap; }
+    header .menu .menu-wrap {
+      width: 50%; }
+    header .menu .menu-contact {
+      width: 50%; }
+    header .menu ul.menu-link > li {
+      margin-bottom: 60px; }
+      header .menu ul.menu-link > li:nth-child(1):before {
+        content: "01"; }
+      header .menu ul.menu-link > li:nth-child(2):before {
+        content: "02"; }
+      header .menu ul.menu-link > li:nth-child(3):before {
+        content: "03"; }
+      header .menu ul.menu-link > li:nth-child(4):before {
+        content: "04"; }
+      header .menu ul.menu-link > li:nth-child(5):before {
+        content: "05"; }
+      header .menu ul.menu-link > li:nth-child(6):before {
+        content: "06"; }
+      header .menu ul.menu-link > li:nth-child(7):before {
+        content: "07"; }
+      header .menu ul.menu-link > li:nth-child(8):before {
+        content: "08"; }
+      header .menu ul.menu-link > li:nth-child(9):before {
+        content: "09"; }
+      header .menu ul.menu-link > li:before {
+        display: inline-block;
+        width: 35px;
+        font-family: 'montserrat';
+        font-size: 1.125rem;
+        font-weight: 300;
+        color: #666666; }
+      header .menu ul.menu-link > li > a {
+        font-size: 2rem;
+        line-height: 1.3;
+        font-weight: 900;
+        color: #333333;
+        display: inline-block;
+        position: relative; }
+        header .menu ul.menu-link > li > a:before {
+          content: '';
+          display: block;
+          background: #050505;
+          opacity: 0.2;
+          height: 20px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          -webkit-transition: all, 0.5s;
+          -khtml-transition: all, 0.5s;
+          -moz-transition: all, 0.5s;
+          -ms-transition: all, 0.5s;
+          -o-transition: all, 0.5s;
+          transition: all, 0.5s; }
+      header .menu ul.menu-link > li:hover > a:before {
+        width: 100%; }
 
 .nav-tabs {
   margin: 0 0 30px;
