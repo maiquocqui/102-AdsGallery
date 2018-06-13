@@ -1,9 +1,21 @@
 footer
+.footer-content
 	padding: 100px 0px 40px
 	background: $footerbg
-	+pos(fix, null 0 0 0)
+	+pos(fix, null null 0 null)
+	width: 100%
 	z-index: -1
 	color: $white
+	.container
+		@media (min-width: 1920px)
+			max-width: 1600px
+			width: 100%
+			padding: 0px 40px
+	.row-wide
+		+media-breakpoint-up(xl)
+			margin: 0px -50px
+			> .col-12
+				padding: 0px 50px
 	.sitelogo
 		margin-bottom: 20px
 	.footer-contact
@@ -24,16 +36,18 @@ footer
 	.social
 		margin-bottom: 40px
 		label
-			+fs(14rem)
-			font-weight: 700
+			+fs(16rem)
 			display: block
-			margin-bottom: 5px
+			font-weight: 700
+			// text-decoration: underline
+			line-height: 40px
 		ul
 			+flexbox
 			flex-wrap: wrap
 			align-items: center
 			align-content: center
 			li
+				line-height: 40px
 				+ li
 					&:before
 						content: '/'
@@ -42,3 +56,11 @@ footer
 						margin: 0px 10px
 				a
 					text-decoration: underline
+	.footer-bottom
+		.datviet-logo
+			+fs(16rem)
+			font-weight: 700
+			color: $greenbg
+		.copyright
+			color: $white
+			+fs(14rem)

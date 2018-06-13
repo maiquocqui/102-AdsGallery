@@ -12,3 +12,65 @@
 
 .home-news
 	padding: 120px 0px 80px
+	.news-slick
+		.slick-dots
+			text-align: center
+			margin-top: 30px
+			li
+				display: inline-block
+				width: 14px
+				height: 14px
+				+bor-rad(50px)
+				background: darken($white,40%)
+				border: 2px solid $white
+				+transition(all,0.5s)
+				cursor: pointer
+				+ li
+					margin-left: 20px
+				&.slick-active
+					border-color: darken($white,40%)
+					background: $white
+				button
+					display: none
+	.news-item
+		display: block
+		+pos(rel,null)
+		figure
+			.news-img
+				margin-left: 140px
+				img
+					width: 100%
+			time
+				+fs(16rem)
+				font-weight: 700
+				color: $dblue
+				+pos(abs, 65px null null 0)
+			figcaption
+				background: $greenbg
+				padding: 20px 35px
+				+pos(abs, 50% null null 0)
+				+transform(translateY(-50%))
+				max-width: 490px
+				.news-name
+					+fs(30rem)
+					line-height: 1.4
+					font-weight: 700
+					color: $dblue
+					margin-bottom: 20px
+				.news-link
+					display: inline-block
+					color: $dblue
+					text-transform: uppercase
+					line-height: 50px
+					padding: 0px 30px
+					border: 1px solid $white
+					.lnr
+						+fs(24rem)
+						margin-left: 5px
+						display: inline-block
+						margin-top: -5px
+						vertical-align: middle
+					&:before
+						background: $dblue
+					&:hover
+						color: $white

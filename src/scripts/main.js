@@ -29,6 +29,14 @@ $(document).ready(function() {
     });
 
     // footer fix
-    $('main').css('margin-bottom', $('footer').outerHeight());
+    $('footer').css('height', $('.footer-content').outerHeight());
 
+    // news slick
+    $('.news-slick').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        speed: 500,
+    })
 });
