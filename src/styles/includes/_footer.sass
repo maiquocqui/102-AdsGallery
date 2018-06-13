@@ -1,0 +1,44 @@
+footer
+	padding: 100px 0px 40px
+	background: $footerbg
+	+pos(fix, null 0 0 0)
+	z-index: -1
+	color: $white
+	.sitelogo
+		margin-bottom: 20px
+	.footer-contact
+		margin-bottom: 20px
+		.col-12
+			margin-bottom: 40px
+		.title
+			+fs(16rem)
+			font-weight: 700
+			text-decoration: underline
+			line-height: 40px
+		ul
+			li
+				+fs(16rem)
+				line-height: 40px
+		a
+			text-decoration: underline
+	.social
+		margin-bottom: 40px
+		label
+			+fs(14rem)
+			font-weight: 700
+			display: block
+			margin-bottom: 5px
+		ul
+			+flexbox
+			flex-wrap: wrap
+			align-items: center
+			align-content: center
+			li
+				+ li
+					&:before
+						content: '/'
+						font-family: 'montserrat'
+						line-height: 1
+						margin: 0px 10px
+				a
+					text-decoration: underline

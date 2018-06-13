@@ -28,4 +28,7 @@ $(document).ready(function() {
         }, 500);
     });
 
+    // footer fix
+    $('main').css('margin-bottom', $('footer').outerHeight());
+
 });

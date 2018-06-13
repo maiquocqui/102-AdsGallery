@@ -29,4 +29,7 @@ $(document).ready(function () {
             scrollTop: $('main').offset().top - $('header').outerHeight()
         }, 500);
     });
+
+    // footer fix
+    $('main').css('margin-bottom', $('footer').outerHeight());
 });
