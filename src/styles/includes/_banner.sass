@@ -1,0 +1,111 @@
+@keyframes scrolldown
+	0%, 100%
+		transform: translateY(0)
+	45%
+		transform: translateY(550%)
+.banner-wrap
+	+pos(rel,null)
+	overflow: hidden
+	.banner
+		height: 100vh
+		max-height: 720px
+		overflow: hidden
+		+flexbox
+		.banner-col
+			flex: 1
+			height: 100%
+			+transition(all,0.5s)
+			+pos(rel,null)
+			&:hover
+				flex: 1.5
+			&:nth-child(1)
+				background-position: 0
+			&:nth-child(2)
+				background-position: 20%
+			&:nth-child(3)
+				background-position: 40%
+			&:nth-child(4)
+				background-position: 60%
+			&:nth-child(5)
+				background-position: 80%
+			.banner-img
+				+pos(abs, 0 null 0 0)
+				right: 0
+				visibility: hidden
+				opacity: 0
+				+transition(all,0.5s)
+			.banner-caption
+				+pos(abs,null 30px 100px 30px)
+				z-index: 3
+				color: $white
+				.number
+					+fs(24rem)
+					font-weight: 300
+					letter-spacing: 2px
+					line-height: 30px
+					margin-bottom: 35px
+					transition: transform .4s ease .1s
+				.title
+					+fs(24rem)
+					font-weight: 700
+					letter-spacing: 2px
+					line-height: 30px
+					transition: transform .4s ease 0s
+			.banner-link
+				+pos(abs, null null 100px 30px)
+				display: block
+				opacity: 0
+				+transform(translateY(70px))
+				transition: opacity .15s ease 0s,transform .25s ease 0s
+				z-index: 3
+				+fs(15rem)
+				color: $white
+				font-weight: 400
+				letter-spacing: 1.2px
+				line-height: 15px
+				margin-top: 40px
+				&:after
+					content: '\e87a'
+					font-family: 'linearicons-free'
+					+fs(36rem)
+					vertical-align: middle
+					margin-left: 5px
+			&:hover
+				.banner-img
+					visibility: visible
+					opacity: 1
+				.banner-caption
+					.number
+						+transform(translateY(-40px))
+						transition: transform .3s ease 0s
+					.title
+						+transform(translateY(-60px))
+						transition: transform .3s ease .1s
+				.banner-link
+					opacity: 1
+					transform: translateY(0)
+					transition: opacity .35s ease .25s,transform .3s ease .25s
+
+	.scroll-indicator
+		+pos(abs, null null 0 50%)
+		+transform(translateX(-50%))
+		z-index: 5
+		cursor: pointer
+		.scroll-indicator-line
+			background-color: $white
+			height: 50px
+			width: 1px
+		.scroll-indicator-circle
+			animation: scrolldown 2.5s cubic-bezier(.77,0,.175,1)
+			animation-iteration-count: infinite
+			background-color: $white
+			+bor-rad(50px)
+			width: 13px
+			height: 13px
+			+pos(abs,-4px null null -6px)
+		.scroll-indicator-description
+			+pos(abs,null null 10px 15px)
+			color: $white
+			+fs(13rem)
+			line-height: 16px
+			text-transform: lowercase

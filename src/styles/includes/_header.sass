@@ -1,6 +1,14 @@
 header
 	+pos(fix, 0 0 null 0)
 	z-index: 1000
+	+transition(all,0.5s)
+	&.minimal
+		background: $white
+		.btn-showmenu
+			color: $dblue
+			.icon
+				span, &:before, &:after
+					background: $dblue
 	.container
 		max-width: 100%
 		width: 100%
