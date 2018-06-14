@@ -31,7 +31,7 @@ $(document).ready(function () {
     });
 
     // footer fix
-    $('footer').css('height', $('.footer-content').outerHeight());
+    $('main').css('margin-bottom', $('footer').outerHeight());
 
     // news slick
     $('.news-slick').slick({
@@ -41,4 +41,7 @@ $(document).ready(function () {
         dots: true,
         speed: 500
     });
+
+    // page clone
+    $('.pages').clone().insertBefore('.product-list');
 });

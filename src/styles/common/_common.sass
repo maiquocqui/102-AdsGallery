@@ -580,24 +580,25 @@ input[type="reset"]
 	.pages
 		display: none
 .pages
-	padding: 20px 0
+	margin-bottom: 40px
 	ul.pagination
 		+flexbox
-		justify-content: center
+		// justify-content: center
 		li
 			+ li
-				margin-left: 10px
+				margin-left: 5px
 			a, span
-				width: 36px
-				height: 36px
+				width: 30px
+				height: 30px
 				+flexbox
 				justify-content: center
 				align-items: center
 				color: $main
-				+fs(20rem)
+				+fs(13rem)
 				font-weight: 600
-				background: darken($white,10%)
-				+bor-rad(50px)
+				border: 2px solid darken($white,20%)
 			&.active
 				a, span
-					background: $yellow
+					background: $green
+					border-color: $green
+					color: $white

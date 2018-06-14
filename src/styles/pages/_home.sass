@@ -1,7 +1,9 @@
 .homepage
 	main
 		background: darken($white,7%)
-
+main
+	+pos(rel,null)
+	z-index: 1
 .home-title
 	+fs(48rem)
 	line-height: 1
@@ -9,6 +11,10 @@
 	font-weight: 900
 	letter-spacing: .5px
 	color: $dblue
+.page-title
+	+fs(30rem)
+	font-weight: 700
+	margin-bottom: 30px
 
 .home-news
 	padding: 120px 0px 80px
