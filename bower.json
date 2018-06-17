@@ -43,7 +43,8 @@
     "fontawesome": "^5.0.12",
     "linearicons": "^1.0.1",
     "k-flex": "^1.0.2",
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "masonry-layout": "masonry#^4.2.1"
   },
   "keywords": [
     "plugins"

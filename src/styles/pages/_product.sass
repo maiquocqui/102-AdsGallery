@@ -28,3 +28,74 @@
 			+fs(18rem)
 			line-height: 1
 			+pos(abs, 10px 0 null null)
+.product-detail
+	padding: 30px
+	background: #f6fce9
+	margin-bottom: 60px
+	.product-name-wrap
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+		margin-bottom: 20px
+		.product-name
+			+fs(36rem)
+			font-weight: 700
+			color: $main
+	.btn-download
+		display: inline-block
+		+fs(18rem)
+		font-weight: 700
+		color: $white
+		background: linear-gradient(to right,#c0d64f,#257538)
+		line-height: 20px
+		padding: 15px 25px
+		.fa
+			margin-right: 10px
+	.product-slide-wrap
+		+pos(rel,null)
+		margin-bottom: 30px
+	.product-slide
+		.img
+			display: block
+			img
+				width: 100%
+	.product-nav
+		max-width: 500px
+		margin: 0 auto
+		+pos(abs, null null 10px 50%)
+		+transform(translateX(-50%))
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 3
+			+fs(0)
+			color: $white
+			&:before
+				content: ''
+				+fs(28rem)
+		.slick-prev
+			left: -30px
+			&:before 
+				content: '\f104'
+		.slick-next
+			right: -30px
+			&:before 
+				content: '\f105'
+		.slick-list
+			margin: 0px -5px
+		.item
+			padding: 0px 5px
+			border: none
+			.img
+				border: 1px solid $white
+				background: $black
+				cursor: pointer
+				img
+					opacity: 0.5
+					+transition(all,0.5s)
+			&.slick-current
+				.img
+					img
+						opacity: 1
+	

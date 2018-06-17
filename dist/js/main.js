@@ -42,6 +42,31 @@ $(document).ready(function () {
         speed: 500
     });
 
+    $('.product-slide').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        fade: true,
+        asNavFor: '.product-nav'
+    });
+    $('.product-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.product-slide',
+        dots: false,
+        arrows: true,
+        centerMode: false,
+        focusOnSelect: true
+    });
+
+    // News masonry
+    $('.news-list').masonry({
+        // options
+        itemSelector: '.news-item'
+        // columnWidth: 200
+    });
+
     // page clone
     $('.pages').clone().insertBefore('.product-list');
 });

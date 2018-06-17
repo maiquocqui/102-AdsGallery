@@ -1,0 +1,93 @@
+.news-page
+	background: #f6fce9
+	padding: 50px 0
+	.news-list
+		margin: 0px -15px
+		+media-breakpoint-down(md)
+			margin: 0px -10px
+		.news-item
+			padding: 0px 15px
+			width: 25%
+			margin-bottom: 30px
+			+media-breakpoint-down(md)
+				width: 33.33%
+				padding: 0px 10px
+				margin-bottom: 20px
+	.news-col
+		padding: 10px 10px 0
+		background: linear-gradient(135deg,$white,$white)
+		+transition(all,0.5s)
+		&:hover
+			background: linear-gradient(135deg,$lime,$green)
+			figure
+				figcaption
+					time, .news-name, .news-des, .news-link
+						color: $white
+		figure
+			.news-img
+				display: block
+				img
+					width: 100%
+			figcaption
+				padding-top: 20px
+				time
+					display: block
+					+fs(13rem)
+					font-weight: 300
+					margin-bottom: 10px
+				.news-name
+					+fs(15rem)
+					font-weight: 500
+					margin-bottom: 10px
+				.news-des
+					+fs(13rem)
+					color: darken($white,60%)
+					margin-bottom: 10px
+				.news-link
+					display: block
+					border-top: 1px solid darken($white,10%)
+					+fs(12rem)
+					line-height: 16px
+					padding: 15px 0
+					font-weight: 500
+					text-transform: uppercase
+					color: $green
+					+pos(rel,null)
+					&:after
+						content: '\e87a'
+						font-family: linearicons-free
+						+pos(abs, 15px 0 null null)
+	.btn-loadmore
+		display: inline-block
+		+fs(13rem)
+		font-weight: 600
+		text-transform: uppercase
+		line-height: 30px
+		padding: 0px 40px
+		background: $lime
+		&:hover
+			background: $green
+			color: $white
+		.material-icons
+			+fs(16rem)
+			line-height: 1
+			vertical-align: middle
+			margin-top: -4px
+.news-detail
+	padding: 30px
+	background: $white
+	margin-bottom: 60px
+	.news-name
+		+fs(36rem)
+		line-height: 1.2
+		font-weight: 700
+		color: $main
+		margin-bottom: 10px
+	time
+		display: block
+		+fs(13rem)
+		font-weight: 300
+		margin-bottom: 40px
+	.share
+		border-top: 1px solid darken($white,10%)
+		padding: 20px 0
