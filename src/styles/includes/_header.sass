@@ -1,7 +1,12 @@
+body
+	+media-breakpoint-down(md)
+		padding-top: 50px
 header
 	+pos(fix, 0 0 null 0)
 	z-index: 1000
 	+transition(all,0.5s)
+	+media-breakpoint-down(md)
+		background: $white
 	&.minimal
 		background: $white
 		.btn-showmenu
@@ -13,6 +18,8 @@ header
 		max-width: 100%
 		width: 100%
 		padding: 0px 40px
+		+media-breakpoint-down(md)
+			padding: 0px 15px
 	.header-wrap
 		+flexbox
 		justify-content: space-between
@@ -28,6 +35,8 @@ header
 		a
 			display: block
 		img
+			+media-breakpoint-down(md)
+				height: 50px
 	.btn-showmenu
 		+fs(14rem)
 		color: $white
@@ -37,6 +46,8 @@ header
 		cursor: pointer
 		+pos(rel,null)
 		z-index: 1000
+		+media-breakpoint-down(md)
+			color: darken($white,60%)
 		.text
 			+transition(all,0.5s)
 		.icon
@@ -44,6 +55,8 @@ header
 			height: 20px
 			+pos(rel,null)
 			margin-left: 30px
+			+media-breakpoint-down(md)
+				margin-left: 10px
 			&:before
 				content: ''
 				display: block
@@ -51,6 +64,8 @@ header
 				background: $white
 				+pos(abs, 0 0 null 0)
 				+transition(all,0.3s)
+				+media-breakpoint-down(md)
+					background: darken($white,60%)
 			&:after
 				content: ''
 				display: block
@@ -58,12 +73,16 @@ header
 				background: $white
 				+pos(abs, null 0 0 0)
 				+transition(all,0.3s)
+				+media-breakpoint-down(md)
+					background: darken($white,60%)
 			span
 				+pos(abs, 50% 0 null 0)
 				+transform(translateY(-50%))
 				background: $white
 				height: 2px
 				+transition(all,0.3s)
+				+media-breakpoint-down(md)
+					background: darken($white,60%)
 		&:hover
 			.icon
 				&:before
@@ -107,29 +126,45 @@ header
 				left: 20%
 				right: 80%
 				transition-delay: 0.15s
+				+media-breakpoint-down(sm)
+					left: 33.33%
+					right: 66.66%
 			&:nth-child(3)
 				left: 40%
 				right: 60%
 				transition-delay: 0.1s
+				+media-breakpoint-down(sm)
+					left: 66.66%
+					right: 33.33%
 			&:nth-child(4)
 				left: 60%
 				right: 40%
 				transition-delay: 0.05s
+				+media-breakpoint-down(sm)
+					display: none
 			&:nth-child(5)
 				left: 80%
 				right: 20%
 				transition-delay: 0s
+				+media-breakpoint-down(sm)
+					display: none
 		&.active
 			.overlay-col
 				&:nth-child(1)
 					right: 80%
 					transition-delay: 0s
+					+media-breakpoint-down(sm)
+						right: 66.66%
 				&:nth-child(2)
 					right: 60%
 					transition-delay: 0.05s
+					+media-breakpoint-down(sm)
+						right: 33.33%
 				&:nth-child(3)
 					right: 40%
 					transition-delay: 0.1s
+					+media-breakpoint-down(sm)
+						right: 0
 				&:nth-child(4)
 					right: 20%
 					transition-delay: 0.15s
@@ -148,6 +183,14 @@ header
 		opacity: 0
 		+transition(all,0.3s)
 		transition-delay: 0s
+		+media-breakpoint-down(md)
+			top: 50px
+			padding: 40px 0
+			overflow: auto
+			align-items: flex-start
+			align-content: flex-start
+		+media-breakpoint-down(sm)
+			padding: 20px 0
 		&.open
 			visibility: visible
 			opacity: 1
@@ -156,13 +199,27 @@ header
 			max-width: 1140px
 			+flexbox
 			flex-wrap: wrap
+			+media-breakpoint-down(md)
+				max-width: 720px
+			+media-breakpoint-down(sm)
+				padding: 0px 15px
 		.menu-wrap
 			width: 60%
+			+media-breakpoint-down(md)
+				width: 50%
+			+media-breakpoint-down(sm)
+				width: 100%
 		.menu-contact
 			width: 40%
+			+media-breakpoint-down(md)
+				width: 50%
+			+media-breakpoint-down(sm)
+				width: 100%
 		ul.menu-link
 			> li
 				margin-bottom: 60px
+				+media-breakpoint-down(sm)
+					margin-bottom: 30px
 				@for $i from 01 to 10
 					&:nth-child(#{$i})
 						&:before
@@ -198,6 +255,8 @@ header
 			margin-bottom: 20px
 			.col-12
 				margin-bottom: 40px
+				+media-breakpoint-down(sm)
+					margin-bottom: 20px
 			.title
 				+fs(16rem)
 				font-weight: 700
@@ -211,6 +270,8 @@ header
 				text-decoration: underline
 		.social
 			margin-bottom: 40px
+			+media-breakpoint-down(sm)
+				margin-bottom: 20px
 			label
 				+fs(14rem)
 				font-weight: 700
@@ -228,6 +289,8 @@ header
 							font-family: 'montserrat'
 							line-height: 1
 							margin: 0px 10px
+							+media-breakpoint-down(sm)
+								margin: 0px 5px
 					a
 						text-decoration: underline
 		.login

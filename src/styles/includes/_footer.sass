@@ -5,6 +5,9 @@ footer
 	width: 100%
 	// z-index: -1
 	color: $white
+	+media-breakpoint-down(md)
+		+pos(static,unset)
+		padding: 40px 0
 	.container
 		@media (min-width: 1920px)
 			max-width: 1600px

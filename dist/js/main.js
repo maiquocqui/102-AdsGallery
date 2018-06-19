@@ -31,7 +31,9 @@ $(document).ready(function () {
     });
 
     // footer fix
-    $('main').css('margin-bottom', $('footer').outerHeight());
+    if ($(window).width() > 991) {
+        $('main').css('margin-bottom', $('footer').outerHeight());
+    }
 
     // news slick
     $('.news-slick').slick({
@@ -58,6 +60,14 @@ $(document).ready(function () {
         arrows: true,
         centerMode: false,
         focusOnSelect: true
+    });
+
+    // partner slick
+    $('.dstream-partner').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false
     });
 
     // News masonry

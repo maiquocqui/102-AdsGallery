@@ -5,6 +5,8 @@
 		margin: 0px -15px
 		+media-breakpoint-down(md)
 			margin: 0px -10px
+		+media-breakpoint-down(sm)
+			margin: 0px -5px
 		.news-item
 			padding: 0px 15px
 			width: 25%
@@ -13,6 +15,9 @@
 				width: 33.33%
 				padding: 0px 10px
 				margin-bottom: 20px
+			+media-breakpoint-down(sm)
+				width: 50%
+				padding: 0px 5px
 	.news-col
 		padding: 10px 10px 0
 		background: linear-gradient(135deg,$white,$white)
@@ -35,14 +40,20 @@
 					+fs(13rem)
 					font-weight: 300
 					margin-bottom: 10px
+					+media-breakpoint-down(sm)
+						+fs(11rem)
 				.news-name
 					+fs(15rem)
 					font-weight: 500
 					margin-bottom: 10px
+					+media-breakpoint-down(sm)
+						+fs(13rem)
 				.news-des
 					+fs(13rem)
 					color: darken($white,60%)
 					margin-bottom: 10px
+					+media-breakpoint-down(sm)
+						+fs(12rem)
 				.news-link
 					display: block
 					border-top: 1px solid darken($white,10%)
@@ -53,6 +64,8 @@
 					text-transform: uppercase
 					color: $green
 					+pos(rel,null)
+					+media-breakpoint-down(sm)
+						+fs(11rem)
 					&:after
 						content: '\e87a'
 						font-family: linearicons-free
@@ -77,12 +90,19 @@
 	padding: 30px
 	background: $white
 	margin-bottom: 60px
+	+media-breakpoint-down(sm)
+		padding: 15px
 	.news-name
 		+fs(36rem)
 		line-height: 1.2
 		font-weight: 700
 		color: $main
 		margin-bottom: 10px
+		+media-breakpoint-down(md)
+			+fs(28rem)
+		+media-breakpoint-down(sm)
+			+fs(24rem)
+			margin-bottom: 10px
 	time
 		display: block
 		+fs(13rem)

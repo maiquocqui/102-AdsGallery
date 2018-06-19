@@ -6,8 +6,13 @@
 		justify-content: space-between
 		align-items: center
 		align-content: center
+		+media-breakpoint-down(md)
+			flex-wrap: wrap
 	.filter-select
 		width: 50%
+		+media-breakpoint-down(md)
+			width: 100%
+			margin-bottom: 10px
 		ul
 			+flexbox
 			flex-wrap: wrap
@@ -36,13 +41,22 @@
 		+flexbox
 		align-items: center
 		align-content: center
+		+media-breakpoint-down(md)
+			width: 100%
+		+media-breakpoint-down(sm)
+			flex-wrap: wrap
 	.search-wrap
+		+media-breakpoint-down(sm)
+			margin-bottom: 10px
+			width: 100%
 		.searchbox
 			+flexbox
 			align-items: center
 			align-content: center
 			background: $white
 			width: 180px
+			+media-breakpoint-down(sm)
+				width: 100%
 			input
 				border: none
 				margin: 0
@@ -67,6 +81,9 @@
 		+flexbox
 		align-items: center
 		align-content: center
+		+media-breakpoint-down(sm)
+			margin-left: 0
+			width: 100%
 		label
 			+fs(13rem)
 			font-weight: 600

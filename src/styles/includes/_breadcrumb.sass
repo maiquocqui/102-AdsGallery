@@ -3,9 +3,18 @@
 	.breadcrumb-img
 		img
 			width: 100%
+			+media-breakpoint-down(md)
+				height: 250px
+				object-fit: cover
 	.pagename
 		+pos(abs, null null 80px auto)
 		+fs(60rem)
 		line-height: 1
 		font-weight: 600
 		color: $white
+		+media-breakpoint-down(lg)
+			left: 40px
+		+media-breakpoint-down(md)
+			bottom: 40px
+			left: 15px
+			+fs(42rem)

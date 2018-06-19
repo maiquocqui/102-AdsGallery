@@ -1,0 +1,47 @@
+.contact-page
+	background: $white
+	padding: 50px 0
+	.contact-wrap
+		padding: 30px
+		background: #f6fce9
+		+media-breakpoint-down(sm)
+			padding: 15px
+	.contact-info
+		.company
+			+fs(30rem)
+			font-weight: 700
+			color: $green
+			margin-bottom: 60px
+		.title 
+			+fs(18rem)
+			font-weight: 700
+			margin-bottom: 20px
+		ul
+			margin-bottom: 30px
+			li
+				+fs(15rem)
+	.contact-form
+		border: 1px solid $lime
+		padding: 10px 20px
+		background: $white
+		margin-bottom: 30px
+		.form-group
+			margin-bottom: 0
+		input, textarea
+			border: none
+			background: none
+			padding: 10px 0
+			+fs(15rem)
+			border-bottom: 1px solid darken($white,10%)
+			width: 100%
+		.frm-btn
+			text-align: right
+			input[type="submit"]
+				border: none
+				background: none
+				width: auto
+				+fs(18rem)
+				font-weight: 700
+				color: $green
+	.contact-map
+		border: 1px solid $lime

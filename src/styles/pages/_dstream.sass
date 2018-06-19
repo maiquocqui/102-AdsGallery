@@ -1,0 +1,45 @@
+.dstream-page
+	background: $white
+	padding: 50px 0
+	.dstream-partner
+		margin-bottom: 40px
+		.partner-logo
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+.dstream-filter
+	+flexbox
+	align-items: center
+	align-content: center
+	padding: 10px 20px
+	margin-bottom: 20px
+	background: #e5e5e5
+	.filter-select
+		+fs(16rem)
+		font-weight: 300
+		color: darken($white,60%)
+		+flexbox
+		align-items: center
+		align-content: center
+		+ .filter-select
+			margin-left: 40px
+		.dropdown
+			margin-left: 10px
+			.dropdown-toggle
+				display: block
+				+fs(15rem)
+				font-weight: 500
+				color: $green
+				line-height: 20px
+				padding: 5px 15px
+				padding-right: 40px
+				border-bottom: 1px solid darken($white,20%)
+				+pos(rel,null)
+				&:after
+					content: '\f107'
+					+pos(abs, 7px 15px null null)
+					border: none
+					width: auto
+					height: auto
+					font-weight: 600

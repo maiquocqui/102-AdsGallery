@@ -13,34 +13,62 @@
 		max-height: 720px
 		overflow: hidden
 		+flexbox
+		+media-breakpoint-down(md)
+			flex-direction: column
+			height: auto
 		.banner-col
 			flex: 1
 			height: 100%
 			+transition(all,0.5s)
 			+pos(rel,null)
+			+media-breakpoint-down(md)
+				// +flexbox
+				// align-items: center
+				// align-content: center
 			&:hover
 				flex: 1.5
 			&:nth-child(1)
 				background-position: 0
+				+media-breakpoint-down(md)
+					background-position: 0
 			&:nth-child(2)
 				background-position: 20%
+				+media-breakpoint-down(md)
+					background-position: 0 20%
 			&:nth-child(3)
 				background-position: 40%
+				+media-breakpoint-down(md)
+					background-position: 0 40%
 			&:nth-child(4)
 				background-position: 60%
+				+media-breakpoint-down(md)
+					background-position: 0 60%
 			&:nth-child(5)
 				background-position: 80%
+				+media-breakpoint-down(md)
+					background-position: 0 80%
 			.banner-img
 				+pos(abs, 0 null 0 0)
 				right: 0
 				visibility: hidden
 				opacity: 0
 				+transition(all,0.5s)
+				+media-breakpoint-down(md)
+					// +pos(static,unset)
 			.banner-caption
 				+pos(abs,null 30px 100px 30px)
 				z-index: 3
 				color: $white
 				white-space: nowrap
+				+media-breakpoint-down(lg)
+					left: 20px
+					right: 20px
+				+media-breakpoint-down(md)
+					+pos(static,unset)
+					+flexbox
+					align-items: center
+					align-content: center
+					padding: 30px 30px
 				.number
 					+fs(24rem)
 					font-weight: 300
@@ -48,12 +76,22 @@
 					line-height: 30px
 					margin-bottom: 35px
 					transition: transform .4s ease .1s
+					+media-breakpoint-down(lg)
+						+fs(16rem)
+						margin-bottom: 0
+						margin-right: 30px
+					+media-breakpoint-down(md)
+						+fs(24rem)
 				.title
 					+fs(24rem)
 					font-weight: 700
 					letter-spacing: 2px
 					line-height: 30px
 					transition: transform .4s ease 0s
+					+media-breakpoint-down(lg)
+						+fs(20rem)
+					+media-breakpoint-down(md)
+						+fs(24rem)
 			.banner-link
 				+pos(abs, null null 100px 30px)
 				display: block
@@ -67,6 +105,8 @@
 				letter-spacing: 1.2px
 				line-height: 15px
 				margin-top: 40px
+				+media-breakpoint-down(md)
+					display: none
 				&:after
 					content: '\e87a'
 					font-family: 'linearicons-free'
@@ -74,20 +114,21 @@
 					vertical-align: middle
 					margin-left: 5px
 			&:hover
-				.banner-img
-					visibility: visible
-					opacity: 1
-				.banner-caption
-					.number
-						+transform(translateY(-40px))
-						transition: transform .3s ease 0s
-					.title
-						+transform(translateY(-60px))
-						transition: transform .3s ease .1s
-				.banner-link
-					opacity: 1
-					transform: translateY(0)
-					transition: opacity .35s ease .25s,transform .3s ease .25s
+				+media-breakpoint-up(lg)
+					.banner-img
+						visibility: visible
+						opacity: 1
+					.banner-caption
+						.number
+							+transform(translateY(-40px))
+							transition: transform .3s ease 0s
+						.title
+							+transform(translateY(-60px))
+							transition: transform .3s ease .1s
+					.banner-link
+						opacity: 1
+						transform: translateY(0)
+						transition: opacity .35s ease .25s,transform .3s ease .25s
 
 	.scroll-indicator
 		+pos(abs, null null 0 50%)
