@@ -8943,6 +8943,136 @@ main {
       .product-detail .product-nav .item.slick-current .img img {
         opacity: 1; }
 
+.news-page {
+  background: #f6fce9;
+  padding: 50px 0; }
+  .news-page .news-list {
+    margin: 0px -15px; }
+    @media (max-width: 991.98px) {
+      .news-page .news-list {
+        margin: 0px -10px; } }
+    @media (max-width: 767.98px) {
+      .news-page .news-list {
+        margin: 0px -5px; } }
+    .news-page .news-list .news-item {
+      padding: 0px 15px;
+      width: 25%;
+      margin-bottom: 30px; }
+      @media (max-width: 991.98px) {
+        .news-page .news-list .news-item {
+          width: 33.33%;
+          padding: 0px 10px;
+          margin-bottom: 20px; } }
+      @media (max-width: 767.98px) {
+        .news-page .news-list .news-item {
+          width: 50%;
+          padding: 0px 5px; } }
+  .news-page .news-col {
+    padding: 10px 10px 0;
+    background: linear-gradient(135deg, #fff, #fff);
+    -webkit-transition: all, 0.5s;
+    -khtml-transition: all, 0.5s;
+    -moz-transition: all, 0.5s;
+    -ms-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    transition: all, 0.5s; }
+    .news-page .news-col:hover {
+      background: linear-gradient(135deg, #c0d64f, #257538); }
+      .news-page .news-col:hover figure figcaption time, .news-page .news-col:hover figure figcaption .news-name, .news-page .news-col:hover figure figcaption .news-des, .news-page .news-col:hover figure figcaption .news-link {
+        color: #fff; }
+    .news-page .news-col figure .news-img {
+      display: block; }
+      .news-page .news-col figure .news-img img {
+        width: 100%; }
+    .news-page .news-col figure figcaption {
+      padding-top: 20px; }
+      .news-page .news-col figure figcaption time {
+        display: block;
+        font-size: 0.8125rem;
+        font-weight: 300;
+        margin-bottom: 10px; }
+        @media (max-width: 767.98px) {
+          .news-page .news-col figure figcaption time {
+            font-size: 0.6875rem; } }
+      .news-page .news-col figure figcaption .news-name {
+        font-size: 0.9375rem;
+        font-weight: 500;
+        margin-bottom: 10px; }
+        @media (max-width: 767.98px) {
+          .news-page .news-col figure figcaption .news-name {
+            font-size: 0.8125rem; } }
+      .news-page .news-col figure figcaption .news-des {
+        font-size: 0.8125rem;
+        color: #666666;
+        margin-bottom: 10px; }
+        @media (max-width: 767.98px) {
+          .news-page .news-col figure figcaption .news-des {
+            font-size: 0.75rem; } }
+      .news-page .news-col figure figcaption .news-link {
+        display: block;
+        border-top: 1px solid #e6e6e6;
+        font-size: 0.75rem;
+        line-height: 16px;
+        padding: 15px 0;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #257538;
+        position: relative; }
+        @media (max-width: 767.98px) {
+          .news-page .news-col figure figcaption .news-link {
+            font-size: 0.6875rem; } }
+        .news-page .news-col figure figcaption .news-link:after {
+          content: '\e87a';
+          font-family: linearicons-free;
+          position: absolute;
+          top: 15px;
+          right: 0; }
+  .news-page .btn-loadmore {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 30px;
+    padding: 0px 40px;
+    background: #c0d64f; }
+    .news-page .btn-loadmore:hover {
+      background: #257538;
+      color: #fff; }
+    .news-page .btn-loadmore .material-icons, .news-page .btn-loadmore .mi {
+      font-size: 1rem;
+      line-height: 1;
+      vertical-align: middle;
+      margin-top: -4px; }
+
+.news-detail {
+  padding: 30px;
+  background: #fff;
+  margin-bottom: 60px; }
+  @media (max-width: 767.98px) {
+    .news-detail {
+      padding: 15px; } }
+  .news-detail .news-name {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 10px; }
+    @media (max-width: 991.98px) {
+      .news-detail .news-name {
+        font-size: 1.75rem; } }
+    @media (max-width: 767.98px) {
+      .news-detail .news-name {
+        font-size: 1.5rem;
+        margin-bottom: 10px; } }
+  .news-detail time {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 300;
+    margin-bottom: 40px; }
+  .news-detail .share {
+    border-top: 1px solid #e6e6e6;
+    padding: 20px 0; }
+
 .contact-page {
   background: #fff;
   padding: 50px 0; }
